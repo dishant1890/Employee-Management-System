@@ -25,9 +25,9 @@ public class SecurityConfig {
             AppUser user = userRepository.findByUsername(username)
                     .orElseThrow(() -> new UsernameNotFoundException("User not found"));
 
-            return User.withUsername(user.GetUsername())
-                    .password(user.GetPassword())
-                    .roles(user.GetRole())
+            return User.withUsername(user.getUsername())
+                    .password(user.getPassword())
+                    .roles(user.getRole())
                     .build();
         };
     }
