@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 public class insertby implements CommandLineRunner {
 
     private final userrepository userRepository;
-    private final BCryptPasswordEncoder passwordEncoder;
+    private final PasswordEncoder passwordEncoder;
 
-    public insertby(userrepository userRepository, BCryptPasswordEncoder passwordEncoder) {
+    public insertby(userrepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
     }
@@ -27,3 +27,4 @@ public class insertby implements CommandLineRunner {
         }
     }
 }
+
